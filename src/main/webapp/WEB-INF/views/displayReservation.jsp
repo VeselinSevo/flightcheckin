@@ -19,7 +19,7 @@
             Phone Number: ${reservation.passenger.phone}<br>
 
         <form action="complete-checkin" method="post">
-            Enter the Number Of Bags You Want To Check In <input type="text" name="numberOfBags" placeholder=""><br/>
+            Enter the Number Of Bags You Want To Check In: <input type="text" name="numberOfBags" placeholder=""><br/>
             <input type="hidden" name="reservationId" value="${reservation.id}">
             <input type="submit" value="Confirm Check In">
         </form>

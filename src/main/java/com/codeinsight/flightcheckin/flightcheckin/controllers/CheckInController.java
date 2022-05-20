@@ -20,6 +20,7 @@ public class CheckInController {
         return "checkIn";
     }
 
+    //Get reservation.id from view, and send it to the rest client
     @RequestMapping("start-checkin")
     public String startCheckIn(@RequestParam("reservationId") Long reservationId, ModelMap modelMap) {
         Reservation reservation = restClient.findReservation(reservationId);
@@ -27,6 +28,7 @@ public class CheckInController {
         return "displayReservation";
     }
 
+    //Get properties from view, set it in ReservationUpdateRequest and send it to the rest client
     @RequestMapping("complete-checkin")
     public String completeCheckIn(@RequestParam("reservationId") Long reservationId,
                                  @RequestParam("numberOfBags") int numberOfBags){
